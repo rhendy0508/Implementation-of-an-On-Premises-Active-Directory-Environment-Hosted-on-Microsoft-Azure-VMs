@@ -58,7 +58,7 @@ Step 2: Created a Domain Admin Account → In Active Directory Users and Compute
   <img src="images/step3-join-client.png" height="80%" width="80%" alt="Step 3 - Join Client to Domain"/>
 </p>
 <p>
-Step 3: Joined Client-1 to the Domain → On the Azure Portal, verified Client-1’s DNS is set to the DC’s private IP address → Restartted Client-1 → Logged in as the local admin "labuser" and joined it to mydomain.com → Verified in ADUC that Client-1 appears under the domain → Created a new OU named "_CLIENTS" and moved Client-1 into it.
+Step 3: Joined Client-1 to the Domain → Restarted Client-1 → Logged in as the local admin "labuser" and joined it to mydomain.com → Verified in ADUC that Client-1 appears under the domain → Created a new OU named "_CLIENTS" and moved Client-1 into it.
 </p>
 
 <br />
