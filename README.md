@@ -68,7 +68,7 @@ Step 3: Joined Client-1 to the Domain → Restarted Client-1 → Logged in as th
   <img src="images/step5-remote-access.png" height="80%" width="80%" alt="Step 4 - Enable Remote Desktop"/>
 </p>
 <p>
-Step 4: Enable Remote Desktop for Domain Users → Power on DC-1 and Client-1 → Log into Client-1 as <code>mydomain.com\jane_admin</code> → Open System Properties → Enable Remote Desktop access → Allow <b>Domain Users</b> access → Confirm non-administrative users can now remotely connect. (In enterprise environments, this is commonly automated via Group Policy.)
+Step 4: Enable Remote Desktop for Domain Users → Powered on DC-1 and Client-1 → Logged into Client-1 as <code>mydomain.com\jane_admin</code> → Opened System Properties → Enabled Remote Desktop access → Allowed <b>Domain Users</b> access → Confirmed non-administrative users can now remotely connect.
 </p>
 
 <br />
@@ -77,7 +77,7 @@ Step 4: Enable Remote Desktop for Domain Users → Power on DC-1 and Client-1 �
   <img src="images/step6-create-users.png" height="80%" width="80%" alt="Step 5 - Create Multiple Users"/>
 </p>
 <p>
-Step 5: Create Multiple Domain Users → Log into DC-1 as <code>jane_admin</code> → Open <b>PowerShell ISE</b> as Administrator → Run a script to bulk create multiple new users in the <code>_EMPLOYEES</code> OU → Verify the new accounts in ADUC → Attempt to log into Client-1 using one of the new user accounts.
+Step 5: Created Multiple Domain Users → Logged into DC-1 as "jane_admin" → Opened <b>PowerShell ISE</b> as Administrator → Ran a script to bulk create multiple new users in the "_EMPLOYEES" OU → Verifed the new accounts in ADUC → Attempted to log into Client-1 using one of the new user accounts.
 </p>
 
 <br />
