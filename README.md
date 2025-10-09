@@ -65,7 +65,7 @@ Step 3: Joined Client-1 to the Domain → Restarted Client-1 → Logged in as th
 
 
 <p>
-  <img src="images/step5-remote-access.png" height="80%" width="80%" alt="Step 5 - Enable Remote Desktop"/>
+  <img src="images/step5-remote-access.png" height="80%" width="80%" alt="Step 4 - Enable Remote Desktop"/>
 </p>
 <p>
 Step 4: Enable Remote Desktop for Domain Users → Power on DC-1 and Client-1 → Log into Client-1 as <code>mydomain.com\jane_admin</code> → Open System Properties → Enable Remote Desktop access → Allow <b>Domain Users</b> access → Confirm non-administrative users can now remotely connect. (In enterprise environments, this is commonly automated via Group Policy.)
@@ -74,7 +74,7 @@ Step 4: Enable Remote Desktop for Domain Users → Power on DC-1 and Client-1 �
 <br />
 
 <p>
-  <img src="images/step6-create-users.png" height="80%" width="80%" alt="Step 6 - Create Multiple Users"/>
+  <img src="images/step6-create-users.png" height="80%" width="80%" alt="Step 5 - Create Multiple Users"/>
 </p>
 <p>
 Step 5: Create Multiple Domain Users → Log into DC-1 as <code>jane_admin</code> → Open <b>PowerShell ISE</b> as Administrator → Run a script to bulk create multiple new users in the <code>_EMPLOYEES</code> OU → Verify the new accounts in ADUC → Attempt to log into Client-1 using one of the new user accounts.
@@ -83,7 +83,7 @@ Step 5: Create Multiple Domain Users → Log into DC-1 as <code>jane_admin</code
 <br />
 
 <p>
-  <img src="images/step7-account-lockout.png" height="80%" width="80%" alt="Step 7 - Account Lockout Policy"/>
+  <img src="images/step7-account-lockout.png" height="80%" width="80%" alt="Step 6 - Account Lockout Policy"/>
 </p>
 <p>
 Step 6: Simulated and Configured Account Lockouts → On DC-1, picked a random user and attemptted to log in 5 times using an incorrect password → Opened Group Policy Management and configured the Account Lockout Threshold to 5 attempts → Retried logging in 7 times with a bad password → Observed that the account is now locked → Unlocked the account in ADUC, I reset the password, and confirmed successful login.
@@ -92,7 +92,7 @@ Step 6: Simulated and Configured Account Lockouts → On DC-1, picked a random u
 <br />
 
 <p>
-  <img src="images/step8-disable-enable.png" height="80%" width="80%" alt="Step 8 - Enable Disable Accounts"/>
+  <img src="images/step8-disable-enable.png" height="80%" width="80%" alt="Step 7 - Enable Disable Accounts"/>
 </p>
 <p>
 Step 7: Enabled and Disabled Accounts → On DC-1, disabled a test user account in ADUC → Attempted to log in and observed the “account disabled” message → Re-enabled the account and verified successful login.
@@ -101,7 +101,7 @@ Step 7: Enabled and Disabled Accounts → On DC-1, disabled a test user account 
 <br />
 
 <p>
-  <img src="images/step9-view-logs.png" height="80%" width="80%" alt="Step 9 - Observe Logs"/>
+  <img src="images/step9-view-logs.png" height="80%" width="80%" alt="Step 8 - Observe Logs"/>
 </p>
 <p>
 Step 8: Reviewed Security and Event Logs → Opened Event Viewer on both DC-1 and Client-1 → Observed authentication attempts, account lockouts, and system log activity → Correlated log entries to user actions for troubleshooting and auditing purposes.
