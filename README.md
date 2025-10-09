@@ -37,7 +37,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>Active Directory IT Support Lab</h2>
 
 <p align="center">
-  <img src="images/step1-install-ad.png" height="80%" width="80%" alt="Step 1 - Install Active Directory"/>
+  <img src="images/step1-ad.png" height="80%" width="80%" alt="Step 1 - Install Active Directory"/>
 </p>
 <p>
 Step 1: Installing Active Directory Domain Services: Logged into DC-1 → Installed Active Directory Domain Services → Promoted it as a Domain Controller (DC) and created a new forest named "mydomain.com" → Restarted the server and logged back in as mydomain.com\labuser.
@@ -46,7 +46,7 @@ Step 1: Installing Active Directory Domain Services: Logged into DC-1 → Instal
 <br />
 
 <p>
-  <img src="images/step2-create-admin.png" height="80%" width="80%" alt="Step 2 - Create Domain Admin"/>
+  <img src="images/step2-ad.png" height="80%" width="80%" alt="Step 2 - Create Domain Admin"/>
 </p>
 <p>
 Step 2: Created a Domain Admin Account → In Active Directory Users and Computers (ADUC), created an Organizational Units (OUs) named "_EMPLOYEES" and "_ADMINS" → Added a new employee "Jane Doe" → Added "jane_admin" to the <b>Domain Admins</b> group → Logged out of DC-1 and logged back in as "mydomain.com\jane_admin".
@@ -55,7 +55,7 @@ Step 2: Created a Domain Admin Account → In Active Directory Users and Compute
 <br />
 
 <p>
-  <img src="images/step3-join-client.png" height="80%" width="80%" alt="Step 3 - Join Client to Domain"/>
+  <img src="images/step3-ad.png" height="80%" width="80%" alt="Step 3 - Join Client to Domain"/>
 </p>
 <p>
 Step 3: Joined Client-1 to the Domain → Restarted Client-1 → Logged in as the local admin "labuser" and joined it to mydomain.com → Verified in ADUC that Client-1 appears under the domain → Created a new OU named "_CLIENTS" and moved Client-1 into it.
@@ -65,7 +65,7 @@ Step 3: Joined Client-1 to the Domain → Restarted Client-1 → Logged in as th
 
 
 <p>
-  <img src="images/step5-remote-access.png" height="80%" width="80%" alt="Step 4 - Enable Remote Desktop"/>
+  <img src="images/step4-ad.png" height="80%" width="80%" alt="Step 4 - Enable Remote Desktop"/>
 </p>
 <p>
 Step 4: Enable Remote Desktop for Domain Users → Powered on DC-1 and Client-1 → Logged into Client-1 as <code>mydomain.com\jane_admin</code> → Opened System Properties → Enabled Remote Desktop access → Allowed <b>Domain Users</b> access → Confirmed non-administrative users can now remotely connect.
@@ -74,7 +74,7 @@ Step 4: Enable Remote Desktop for Domain Users → Powered on DC-1 and Client-1 
 <br />
 
 <p>
-  <img src="images/step6-create-users.png" height="80%" width="80%" alt="Step 5 - Create Multiple Users"/>
+  <img src="images/step5-ad.png" height="80%" width="80%" alt="Step 5 - Create Multiple Users"/>
 </p>
 <p>
 Step 5: Created Multiple Domain Users → Logged into DC-1 as "jane_admin" → Opened <b>PowerShell ISE</b> as Administrator → Ran a script to bulk create multiple new users in the "_EMPLOYEES" OU → Verifed the new accounts in ADUC → Attempted to log into Client-1 using one of the new user accounts.
@@ -83,7 +83,7 @@ Step 5: Created Multiple Domain Users → Logged into DC-1 as "jane_admin" → O
 <br />
 
 <p>
-  <img src="images/step7-account-lockout.png" height="80%" width="80%" alt="Step 6 - Account Lockout Policy"/>
+  <img src="images/step6-ad.png" height="80%" width="80%" alt="Step 6 - Account Lockout Policy"/>
 </p>
 <p>
 Step 6: Simulated and Configured Account Lockouts → On DC-1, picked a random user and attemptted to log in 5 times using an incorrect password → Opened Group Policy Management and configured the Account Lockout Threshold to 5 attempts → Retried logging in 7 times with a bad password → Observed that the account is now locked → Unlocked the account in ADUC, I reset the password, and confirmed successful login.
@@ -92,7 +92,7 @@ Step 6: Simulated and Configured Account Lockouts → On DC-1, picked a random u
 <br />
 
 <p>
-  <img src="images/step8-disable-enable.png" height="80%" width="80%" alt="Step 7 - Enable Disable Accounts"/>
+  <img src="images/step7-ad.png" height="80%" width="80%" alt="Step 7 - Enable Disable Accounts"/>
 </p>
 <p>
 Step 7: Enabled and Disabled Accounts → On DC-1, disabled a test user account in ADUC → Attempted to log in and observed the “account disabled” message → Re-enabled the account and verified successful login.
@@ -101,7 +101,7 @@ Step 7: Enabled and Disabled Accounts → On DC-1, disabled a test user account 
 <br />
 
 <p>
-  <img src="images/step9-view-logs.png" height="80%" width="80%" alt="Step 8 - Observe Logs"/>
+  <img src="images/step8-ad.png" height="80%" width="80%" alt="Step 8 - Observe Logs"/>
 </p>
 <p>
 Step 8: Reviewed Security and Event Logs → Opened Event Viewer on both DC-1 and Client-1 → Observed authentication attempts, account lockouts, and system log activity → Correlated log entries to user actions for troubleshooting and auditing purposes.
